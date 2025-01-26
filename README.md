@@ -1,35 +1,58 @@
-# **Netflix-Movie-Recommendation-System**
-The project in the notebook is a movie recommendation system. It aims to predict movies that a user might enjoy based on their past ratings and the ratings of other users.
+# Netflix Movie Recommendation System
 
-**Here's a breakdown:**
+The Netflix Movie Recommendation System is a project aimed at predicting movies that users might enjoy based on their past ratings and the preferences of other users. It leverages collaborative filtering techniques to provide personalized movie recommendations.
 
-**Project Goal:**
+---
 
-Build a system that recommends movies to users based on their preferences and the preferences of similar users.
-The notebook uses data from Netflix consisting of user ratings on movies.
-Algorithm Used:
+## **Project Goal**
+The primary objective is to build a recommendation system that suggests movies to users based on:
+- Their own preferences.
+- The preferences of similar users.
 
-The primary algorithm used for building the recommendation system is SVD (Singular Value Decomposition).
+---
 
-SVD is a matrix factorization technique that is widely used in collaborative filtering for recommendation systems.
-It decomposes the user-item rating matrix into three matrices, revealing latent factors that represent underlying preferences and patterns.
-These latent factors are then used to predict the rating a user would give to an item they haven't seen before.
-Key Steps in the Notebook:
+## **Algorithm Used**
+The recommendation system is built using **SVD (Singular Value Decomposition)**:
+- **SVD** is a matrix factorization technique widely used in collaborative filtering.
+- It decomposes the user-item rating matrix into three smaller matrices, revealing **latent factors** that represent hidden patterns and preferences.
+- These latent factors are used to predict how a user would rate movies they haven’t seen yet.
 
-**Data Loading and Preprocessing:**
+---
 
-Reads movie ratings data.
-Performs data cleaning and filtering to remove inactive users and unpopular movies.
-Model Building:
+## **Key Steps**
+### 1. **Data Loading and Preprocessing**
+- The dataset consists of user ratings for Netflix movies.
+- Steps include:
+  - Reading the data.
+  - Cleaning and filtering to remove:
+    - Inactive users.
+    - Movies with insufficient ratings.
 
-Uses the surprise library to implement SVD.
-Trains the model on a portion of the data.
-**Recommendation Generation:**
+### 2. **Model Building**
+- The **Surprise library** is used to implement the SVD algorithm.
+- The model is trained on a subset of the data to learn user preferences and movie patterns.
 
-Filters the data to find movies a specific user liked.
-Predicts the ratings for all other movies for that user using the SVD model.
-Sorts the predictions to recommend the top movies with the highest predicted ratings.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-In summary, this project implements a movie recommendation system using the SVD algorithm. It involves data preprocessing, model building, and recommendation generation steps.
+### 3. **Recommendation Generation**
+- The system:
+  1. Filters data to identify movies a specific user liked.
+  2. Predicts ratings for all other movies for that user using the trained SVD model.
+  3. Sorts the predictions to recommend the **top movies** with the highest predicted ratings.
 
-I hope this helps! Let me know if you have any more questions.
+---
+
+## **Key Features**
+- **Tools & Technologies:**
+  - Python
+  - Surprise Library (for SVD)
+  - Pandas and NumPy (for data preprocessing)
+  - Matplotlib (for visualization)
+- **Performance Metrics:**
+  - Evaluated the model using metrics like **RMSE (Root Mean Squared Error)**.
+  - Achieved **optimized results** through parameter tuning and cross-validation.
+
+---
+
+## **How to Run the Project**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JADHAVRAJVARDHAN/Netflix-Movie-Recommendation-System.git
